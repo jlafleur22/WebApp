@@ -1,0 +1,32 @@
+<html lang="en-us">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <h1>Welcome to the Quiz Site!</h1>
+    <div class="site-home">
+      <p>Welcome to the Math Quiz. Please enter a username below:</p>
+      <br>
+      <!--Get code to post username to list, and associate it with result when that is ready-->
+      <form action="/results" method="POST">
+        <input type="text" name="username">
+        <button type="submit" value="Submit">Submit</button>
+      </form>
+    </div>
+    <div title="navigation">
+      <br>
+      <%- include('./partials/nav.ejs') %><!-- minus instead of equals allows me to format in html instead of strings -->
+    </div>
+    <br>
+    <div class="prior-results content">
+        <% if (usernames.length > 0) { %>
+          <h3> Previous Visitors</h3>
+          <% usernames.forEach(username => { %>
+
+            <p class="usernames"><%= username.user %></p>
+
+         <% }) %>
+        <% } %>
+    </div>
+    <footer>
+    </footer>
+  </body>
+</html>

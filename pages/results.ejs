@@ -1,0 +1,27 @@
+<html lang="en-us">
+  <%- include('./partials/head.ejs') %>
+  <body>
+      <h1>Time For The Quiz</h1>
+      <div>
+        <!--This form should Post to the results page, and fill the previous results on home page. maybe-->
+        
+      <h3 class="title">Survey Results</h3>
+      <div class="prior-results content">
+        <% if Informations.length > 0) { %>
+          <h3> Previous Visitors</h3>
+          <% Informations.forEach(Information => { %>
+
+            <p class="age"><%= Informations.age %></p>
+            <p class="answer"><%= Informations.answer %></p>
+
+         <% }) %>
+        <% } else { %>
+          <p>No user data</p>
+          <% } %>
+      </div>
+    <footer>
+      <br>
+      <%- include('./partials/nav.ejs') %>
+    </footer>
+  </body>
+</html>

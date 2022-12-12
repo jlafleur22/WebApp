@@ -1,0 +1,27 @@
+body{
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: serif;
+    background-color: aliceblue;
+}
+p, h1, h2, h3, a, ul{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #222;
+}
+.content{
+    margin-left: 20px;
+}
+.quiz form{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.quiz label{
+    display: block;
+    margin-top: 24px;
+}
+textarea{
+    height: 30px;
+}
+
